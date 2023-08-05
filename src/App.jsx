@@ -1,30 +1,32 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import Navigation from "./components/Navigation/Navigation";
-import Map from "./components/Map/Map";
+
+import RootLayout from "./pages/RootLayout";
+import ErrorPage from "./pages/ErrorPage";
+import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
+import Contact from "./pages/Contact";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <RootLayout />,
+        errorElement: <ErrorPage />,
+        children: [
+            { path: "/home", element: <Home /> },
+            { path: "/about-us", element: <AboutUs /> },
+            { path: "/contact", element: <Contact /> },
+        ],
+    },
+]);
 
 function App() {
     return (
         <>
-            <header id="header">
+            <RouterProvider router={router}>
                 <Navigation />
-                <div className="flex items-center justify-center">
-                    <h1>Welcome to the Dog House</h1>
-                </div>
-            </header>
-            <main>
-                <div className="flex items-center justify-center">
-                    <img
-                        src="/images/dhlogo.jpeg"
-                        alt="dog house logo"
-                        className="animate-pulse"
-                    />
-                </div>
-
-                <section></section>
-            </main>
-
-            <footer id="contact">
-                <Map />
-            </footer>
+            </RouterProvider>
         </>
     );
 }
