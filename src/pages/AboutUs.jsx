@@ -1,9 +1,9 @@
 const AboutUs = () => {
     return (
         <div className="flex flex-col items-center justify-center">
-            <section className="flex  flex-col items-center">
-                <h1>About the Club</h1>
-                <p className="w-86">
+            <section className="flex flex-col items-center">
+                <h1 className="m-10">About the Club</h1>
+                <div className="w-9/12">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Proin commodo massa neque, at interdum quam condimentum vel.
                     Nunc vehicula scelerisque scelerisque. Sed ut ipsum sit amet
@@ -15,11 +15,11 @@ const AboutUs = () => {
                     efficitur, rhoncus vestibulum elit suscipit. Vivamus
                     molestie laoreet metus, faucibus lobortis nibh porttitor
                     vitae. Nunc sit amet finibus libero.
-                </p>
+                </div>
             </section>
 
-            <section>
-                <h2>Meet the Dogs</h2>
+            <section className="flex flex-col items-center">
+                <h2 className="m-10">Meet the Dogs</h2>
                 <p></p>
             </section>
         </div>
