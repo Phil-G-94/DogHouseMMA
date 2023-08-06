@@ -27,6 +27,7 @@ function App() {
             <RouterProvider router={router}>
                 <Navigation />
             </RouterProvider>
+            <Analytics />
         </>
     );
 }
