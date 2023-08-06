@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 
 import Navigation from "./components/Navigation/Navigation";
-
 import RootLayout from "./pages/RootLayout";
 import ErrorPage from "./pages/ErrorPage";
 import Home from "./pages/Home";

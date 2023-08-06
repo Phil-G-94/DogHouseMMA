@@ -11,8 +11,6 @@ const Home = () => {
                         className="animate-pulse"
                     />
                 </div>
-
-                <section></section>
             </main>
 
             <footer>

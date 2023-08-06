@@ -1,7 +1,27 @@
 const AboutUs = () => {
     return (
-        <div className="flex place-content-center justify-center">
-            <h1>About Us Page</h1>
+        <div className="flex flex-col items-center justify-center">
+            <section className="flex  flex-col items-center">
+                <h1>About the Club</h1>
+                <p className="w-86">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Proin commodo massa neque, at interdum quam condimentum vel.
+                    Nunc vehicula scelerisque scelerisque. Sed ut ipsum sit amet
+                    justo vehicula pellentesque a nec libero. Aenean pulvinar
+                    lacus quis accumsan commodo. Ut dui magna, iaculis in dui
+                    at, fermentum dignissim lorem. Aenean placerat, sapien nec
+                    ullamcorper sodales, orci nunc iaculis augue, sed lobortis
+                    massa libero eget erat. Nam condimentum odio in dolor
+                    efficitur, rhoncus vestibulum elit suscipit. Vivamus
+                    molestie laoreet metus, faucibus lobortis nibh porttitor
+                    vitae. Nunc sit amet finibus libero.
+                </p>
+            </section>
+
+            <section>
+                <h2>Meet the Dogs</h2>
+                <p></p>
+            </section>
         </div>
     );
 };
