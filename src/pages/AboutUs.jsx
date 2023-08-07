@@ -1,3 +1,5 @@
+import Display from "../components/Display/Display";
+
 const AboutUs = () => {
     return (
         <div className="flex flex-col items-center justify-center">
@@ -32,6 +34,7 @@ const AboutUs = () => {
                         Aenean pulvinar lacus quis accumsan commodo.
                     </p>
                 </div>
+                <Display />
             </section>
         </div>
     );
