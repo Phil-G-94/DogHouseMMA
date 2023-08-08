@@ -5,7 +5,7 @@ const Navigation = () => {
         <header>
             <nav className="flex flex-col m-0 p-0 gap-4 list-none justify-evenly md:flex-row">
                 <NavLink
-                    to="/home"
+                    to="/"
                     className="hover:bg-slate-50 hover:text-black rounded-md m-2"
                 >
                     Home

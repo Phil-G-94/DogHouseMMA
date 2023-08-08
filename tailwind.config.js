@@ -18,7 +18,7 @@ const flipCard = plugin(function ({ addUtilities }) {
         },
 
         ".backface-hidden": {
-            backfaceVisibilityy: "hidden"
+            backfaceVisibility: "hidden"
         },
 
     })
@@ -29,5 +29,5 @@ export default {
     theme: {
         extend: {},
     },
-    plugins: [flipCard],
+    plugins: [flipCard, '@tailwindcss/forms'],
 };
