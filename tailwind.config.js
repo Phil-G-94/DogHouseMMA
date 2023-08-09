@@ -24,10 +24,22 @@ const flipCard = plugin(function ({ addUtilities }) {
     })
 })
 
+const validation = plugin(function ({ addUtilities }) {
+    addUtilities({
+        ".valid": {
+            backgroundColor: "#86efac"
+
+        },
+        ".invalid": {
+            backgroundColor: "#fda4af"
+        }
+    })
+})
+
 export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
         extend: {},
     },
-    plugins: [flipCard, '@tailwindcss/forms'],
+    plugins: [validation, flipCard, '@tailwindcss/forms'],
 };
