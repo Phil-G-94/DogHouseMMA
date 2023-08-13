@@ -1,6 +1,16 @@
 import useForm from "../../hooks/use-form";
 
+import { useSelector, useDispatch } from "react-redux";
+import Notification from "../Notification/Notification";
+import { notificationActions } from "../../store/notification-slice";
+
 const ContactForm = () => {
+    const notification = useSelector(
+        (state) => state.notification.notification
+    );
+
+    const dispatch = useDispatch();
+
     const fullNameRegEx = /^([\p{L}]{2,})+\s+([\p{L}\s]{3,})+$/iu;
 
     const emailRegEx = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g;
@@ -55,6 +65,13 @@ const ContactForm = () => {
         }
 
         const sendMessageRequest = async () => {
+            dispatch(
+                notificationActions.showNotification({
+                    status: "sending",
+                    title: "Sending...",
+                    message: "Sending message...",
+                })
+            );
             const response = await fetch(
                 "https://dhmma-contact-form-default-rtdb.europe-west1.firebasedatabase.app/contact.json",
                 {
@@ -68,7 +85,22 @@ const ContactForm = () => {
             );
 
             if (!response.ok) {
+                dispatch(
+                    notificationActions.showNotification({
+                        status: "fail",
+                        title: "Failed to send.",
+                        message: "Messaged failed to send.",
+                    })
+                );
                 throw new Error("Message not sent");
+            } else {
+                dispatch(
+                    notificationActions.showNotification({
+                        status: "success",
+                        title: "Sent.",
+                        message: "Message sent.",
+                    })
+                );
             }
 
             nameInputReset();
@@ -81,6 +113,13 @@ const ContactForm = () => {
 
     return (
         <div className="m-20 py-12 bg-indigo-200 rounded-md w-80">
+            {notification && (
+                <Notification
+                    status={notification.status}
+                    title={notification.title}
+                    message={notification.message}
+                ></Notification>
+            )}
             <div className="mt-8 max-w-md">
                 <div className="grid grid-cols-1 gap-6">
                     <form
@@ -127,7 +166,7 @@ const ContactForm = () => {
                                 <span className="text-black">Message</span>
                                 <textarea
                                     rows="10"
-                                    cols="20"
+                                    cols="30"
                                     className={messageValidityStyle}
                                     value={messageInputValue ?? ""}
                                     onChange={messageInputChangeHandler}
