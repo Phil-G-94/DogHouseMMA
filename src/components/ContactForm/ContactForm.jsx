@@ -1,7 +1,7 @@
 import useForm from "../../hooks/use-form";
 
 const ContactForm = () => {
-    const fullNameRegEx = /\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+/gm;
+    const fullNameRegEx = /^([\p{L}]{2,})+\s+([\p{L}\s]{3,})+$/iu;
 
     const emailRegEx = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 
@@ -23,6 +23,15 @@ const ContactForm = () => {
         reset: emailInputReset,
     } = useForm((value) => emailRegEx.test(value) && value.trim() !== "");
 
+    const {
+        value: messageInputValue,
+        isValid: messageInputIsValid,
+        hasError: messageInputHasError,
+        inputChangeHandler: messageInputChangeHandler,
+        inputBlurHandler: messageInputBlurHandler,
+        reset: messageInputReset,
+    } = useForm((value) => value.trim().length > 50 && value.trim() !== "");
+
     const nameInputIsInvalid = !nameInputIsValid && nameInputHasError;
     const nameValidityStyle = nameInputIsInvalid
         ? "invalid mt-1 block w-full rounded-md border-red-800 text-red-800"
@@ -33,6 +42,11 @@ const ContactForm = () => {
         ? "invalid mt-1 block w-full rounded-md border-red-800 text-red-800"
         : "valid mt-1 block w-full rounded-md border-green-800 text-green-800";
 
+    const messageInputIsInvalid = !messageInputIsValid && messageInputHasError;
+    const messageValidityStyle = messageInputIsInvalid
+        ? "invalid mt-1 block w-full rounded-md border-red-800 text-red-800"
+        : "valid mt-1 block w-full rounded-md border-green-800 text-green-800";
+
     const formSubmissionHandler = (event) => {
         event.preventDefault();
 
@@ -40,8 +54,29 @@ const ContactForm = () => {
             return;
         }
 
-        nameInputReset();
-        emailInputReset();
+        const sendMessageRequest = async () => {
+            const response = await fetch(
+                "https://dhmma-contact-form-default-rtdb.europe-west1.firebasedatabase.app/contact.json",
+                {
+                    method: "POST",
+                    body: JSON.stringify({
+                        name: nameInputValue,
+                        email: emailInputValue,
+                        message: messageInputValue,
+                    }),
+                }
+            );
+
+            if (!response.ok) {
+                throw new Error("Message not sent");
+            }
+
+            nameInputReset();
+            emailInputReset();
+            messageInputReset();
+        };
+
+        sendMessageRequest();
     };
 
     return (
@@ -63,28 +98,46 @@ const ContactForm = () => {
                                 onChange={nameInputChangeHandler}
                                 onBlur={nameInputBlurHandler}
                             />
+                            {nameInputIsInvalid && (
+                                <p className="text-red-800 m-2 text-xs">
+                                    First name must be longer than 2 characters;
+                                    surname must be longer than 3.
+                                </p>
+                            )}
                         </label>
                         <label className="block m-4">
                             <span className="text-black">Email Address</span>
                             <input
-                                type="email"
+                                type="text"
                                 placeholder="john@example.com"
                                 className={emailValidityStyle}
                                 value={emailInputValue ?? ""}
                                 onChange={emailInputChangeHandler}
                                 onBlur={emailInputBlurHandler}
                             />
+                            {emailInputIsInvalid && (
+                                <p className="text-red-800 m-2 text-xs">
+                                    Email must be in valid format.
+                                </p>
+                            )}
                         </label>
 
                         <div className="flex place-items-center justify-center m-4">
                             <label className="block">
                                 <span className="text-black">Message</span>
                                 <textarea
-                                    className="mt-1 block w-full rounded-md border-black shadow-sm"
                                     rows="10"
                                     cols="20"
-                                    minLength={10}
+                                    className={messageValidityStyle}
+                                    value={messageInputValue ?? ""}
+                                    onChange={messageInputChangeHandler}
+                                    onBlur={messageInputBlurHandler}
                                 ></textarea>
+                                {messageInputIsInvalid && (
+                                    <p className="text-red-800 m-2 text-xs">
+                                        Message must be &gt; 50 characters long.
+                                    </p>
+                                )}
                             </label>
                         </div>
                         <div className="flex place-items-center justify-center m-4">
