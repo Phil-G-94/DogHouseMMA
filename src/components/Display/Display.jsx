@@ -22,7 +22,9 @@ const Display = () => {
                 </div>
             </div>
             <div>
-                <h2 className="flex flex-row place-content-center">Members</h2>
+                <h2 className="flex flex-row place-content-center text-xl">
+                    Members
+                </h2>
                 <div className="grid grid-cols-4 m-10">
                     {MEMBERS.map((member) => (
                         <Card

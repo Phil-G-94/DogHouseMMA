@@ -5,7 +5,7 @@ const Card = (props) => {
                 <div className="relative preserve-3d group-hover:rotate-y-180 w-full h-full duration-1000">
                     <div className="absolute backface-hidden w-full h-full rounded-lg">
                         <img
-                            className="w-full h-full"
+                            className="w-full h-full object-contain"
                             src="/images/dhlogo-card.jpeg"
                             alt="logo"
                         />

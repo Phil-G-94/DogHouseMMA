@@ -112,7 +112,7 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="m-20 py-12 bg-indigo-200 rounded-md w-80">
+        <div className="m-20 py-12 bg-yellow-500 rounded-md w-80">
             {notification && (
                 <Notification
                     status={notification.status}
@@ -180,7 +180,7 @@ const ContactForm = () => {
                             </label>
                         </div>
                         <div className="flex place-items-center justify-center m-4">
-                            <button className="rounded-full bg-indigo-700 p-3 m-2 hover:text-black hover:bg-yellow-500 text-black">
+                            <button className="rounded-full bg-indigo-700 p-3 m-2 hover:text-white hover:bg-black text-black">
                                 Send Message
                             </button>
                         </div>
