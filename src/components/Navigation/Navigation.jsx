@@ -4,7 +4,7 @@ const Navigation = () => {
     return (
         // should these be LIs?
         <header>
-            <nav className="flex flex-col m-0 p-0 gap-4 list-none justify-evenly md:flex-row">
+            <nav className="flex flex-col m-0 p-0 gap-2 list-none justify-evenly md:flex-row">
                 <NavLink
                     to="/"
                     className="  rounded-md m-2 hover:bg-yellow-500 hover:text-black visited:bg-yellow-500" // visited property doesn't display as intended
@@ -23,6 +23,12 @@ const Navigation = () => {
                     className=" rounded-md m-2 hover:bg-yellow-500 hover:text-black visited:bg-yellow-500"
                 >
                     Contact
+                </NavLink>
+                <NavLink
+                    to="/comps"
+                    className="rounded-md m-2 hover:bg-yellow-500 hover:text-black visited:bg-yellow-500"
+                >
+                    Comps
                 </NavLink>
             </nav>
         </header>

@@ -7,6 +7,7 @@ import ErrorPage from "./pages/ErrorPage";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
+import CompsPage from "./pages/CompsPage";
 
 const router = createBrowserRouter([
     {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
             { index: true, element: <Home /> },
             { path: "about-us", element: <AboutUs /> },
             { path: "contact", element: <Contact /> },
+            { path: "comps", element: <CompsPage /> },
         ],
     },
 ]);
