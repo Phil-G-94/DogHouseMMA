@@ -17,7 +17,7 @@ const Comps = ({ events }) => {
                         <li>{event.date}</li>
                         <li>
                             <p className="text-sm text-center ">
-                                {event.description}{" "}
+                                {event.description}
                             </p>
                         </li>
                         <img
