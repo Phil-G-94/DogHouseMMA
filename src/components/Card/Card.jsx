@@ -13,16 +13,16 @@ const Card = (props) => {
 
                     <div className="absolute rotate-y-180 backface-hidden w-full h-full bg-yellow-500 overflow-hidden rounded-lg">
                         <div className="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24">
-                            <p>
-                                {/* MEMBER.name Member.surname */}
-                                {props.name} {props.surname}
-                            </p>
                             <ul>
-                                <li>
+                                <li className="text-sm md:text-md lg:text-lg">
+                                    {/* MEMBER.name Member.surname */}
+                                    {props.name} {props.surname}
+                                </li>
+                                <li className="text-sm">
                                     {/* MEMBER.title */}
                                     {props.title}
                                 </li>
-                                <li>
+                                <li className="text-sm">
                                     {/* MEMBER.rank */}
                                     {props.rank}
                                 </li>
@@ -40,8 +40,5 @@ export default Card;
 /* 
 
 flip card source attribution: https://github.com/Sridhar-C-25/animated3dflipcard_tailwind/blob/main/src/index.html
-
-
-
 
 */

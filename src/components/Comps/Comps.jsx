@@ -1,27 +1,19 @@
 const Comps = ({ events }) => {
     return (
         <>
-            <h2>This is the Comps component</h2>
-
-            <p>
-                Here I should manipulate and display data passed down to this
-                component from the Comps Page.
-            </p>
-            <div className=" bg-yellow-500 ">
+            <div className="bg-purple-300 rounded-md grid grid-cols-1 gap-4 ">
                 {events.map((event) => (
                     <ul
                         key={event.id}
-                        className="grid grid-cols-2 gap-2 place-content-center place-items-center rounded-md border-black border-2"
+                        className="flex flex-col place-items-center p-3 m-auto text-center "
                     >
-                        <li>{event.title}</li>
-                        <li>{event.date}</li>
-                        <li>
-                            <p className="text-sm text-center ">
-                                {event.description}
-                            </p>
+                        <li className="w-2/5 ">{event.title}</li>
+                        <li className="w-2/5">{event.date}</li>
+                        <li className="w-2/5">
+                            <p className="text-sm">{event.description}</p>
                         </li>
                         <img
-                            className="object-cover w-1/3 "
+                            className="object-cover w-4/6 md:w-2/5"
                             src={event.image}
                             alt="event image"
                         />

@@ -4,32 +4,50 @@ const Navigation = () => {
     return (
         // should these be LIs?
         <header>
-            <nav className="flex flex-col m-0 p-0 gap-2 list-none justify-evenly md:flex-row">
-                <NavLink
-                    to="/"
-                    className="  rounded-md m-2 hover:bg-yellow-500 hover:text-black visited:bg-yellow-500" // visited property doesn't display as intended
-                    end
-                >
-                    Home
-                </NavLink>
-                <NavLink
-                    to="/about-us"
-                    className="  rounded-md m-2 hover:bg-yellow-500 hover:text-black visited:bg-yellow-500"
-                >
-                    About Us
-                </NavLink>
-                <NavLink
-                    to="/contact"
-                    className=" rounded-md m-2 hover:bg-yellow-500 hover:text-black visited:bg-yellow-500"
-                >
-                    Contact
-                </NavLink>
-                <NavLink
-                    to="/comps"
-                    className="rounded-md m-2 hover:bg-yellow-500 hover:text-black visited:bg-yellow-500"
-                >
-                    Comps
-                </NavLink>
+            <nav>
+                <ul className="flex flex-row place-content-center gap-4 md:gap-10 lg:gap-20">
+                    <li>
+                        <NavLink
+                            to="/"
+                            className="rounded-md  hover:bg-yellow-500 hover:text-black visited:bg-yellow-500" // visited property doesn't display as intended
+                            end
+                        >
+                            Home
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/about-us"
+                            className="rounded-md  hover:bg-yellow-500 hover:text-black "
+                        >
+                            About Us
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/contact"
+                            className="rounded-md  hover:bg-yellow-500 hover:text-black "
+                        >
+                            Contact
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/comps"
+                            className="rounded-md  hover:bg-yellow-500 hover:text-black "
+                        >
+                            Comps
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/shop"
+                            className="rounded-md  hover:bg-yellow-500 hover:text-black "
+                        >
+                            Shop
+                        </NavLink>
+                    </li>
+                </ul>
             </nav>
         </header>
     );

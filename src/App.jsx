@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import CompsPage from "./pages/CompsPage";
-
+import ShopPage from "./pages/ShopPage";
 import { compListLoader } from "./utils/compListLoader";
 
 const router = createBrowserRouter([
@@ -21,6 +21,7 @@ const router = createBrowserRouter([
             { path: "about-us", element: <AboutUs /> },
             { path: "contact", element: <Contact /> },
             { path: "comps", element: <CompsPage />, loader: compListLoader },
+            { path: "shop", element: <ShopPage /> },
         ],
     },
 ]);
