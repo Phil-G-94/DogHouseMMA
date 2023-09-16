@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
 import ShopItem from "./ShopItem";
+import ShopCartButton from "./ShopCartButton";
 
-const Shop = () => {
+const Shop = ({ onShowCart }) => {
     const [shopItems, setShopItems] = useState([]);
 
     const fetchItemsHandler = useCallback(async () => {
@@ -39,9 +40,11 @@ const Shop = () => {
 
     return (
         <section className="flex flex-col place-items-center">
+            <ShopCartButton showCart={onShowCart} />
             {shopItems.map((item) => (
                 <ShopItem
                     key={item.name}
+                    id={item.id}
                     description={item.description}
                     name={item.name}
                     price={item.price}
