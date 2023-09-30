@@ -11,7 +11,7 @@ const Backdrop = (props) => {
 
 const ModalOverlay = (props) => {
     return (
-        <div className="md:max-w-2xl">
+        <div>
             <div className="flex place-content-center fixed bg-slate-200 z-30 p-4 rounded-2xl shadow-sm">
                 <div>{props.children}</div>
             </div>
