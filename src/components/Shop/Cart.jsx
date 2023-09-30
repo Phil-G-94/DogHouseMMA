@@ -18,9 +18,7 @@ const Cart = ({ onClose }) => {
 
     const shopCartItems = (
         <div>
-            <h2 className="text-black flex flex-row place-content-center">
-                Your Cart
-            </h2>
+            <h2 className="text-black flex flex-row place-content-center">Your Cart</h2>
             <ul>
                 {shopCartCtx.items.map((item) => (
                     <CartItem

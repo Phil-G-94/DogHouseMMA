@@ -11,11 +11,15 @@ const Backdrop = (props) => {
 
 const ModalOverlay = (props) => {
     return (
-        <div className="fixed top-8 left-24 w-11/12 bg-slate-200 z-30 p-4 rounded-2xl shadow-sm">
-            <div>{props.children}</div>
+        <div className="md:max-w-2xl">
+            <div className="flex place-content-center fixed bg-slate-200 z-30 p-4 rounded-2xl shadow-sm">
+                <div>{props.children}</div>
+            </div>
         </div>
     );
 };
+
+// lg:top-32 lg:left-16 lg:w-11/12
 
 const portalElement = document.getElementById("overlay");
 
@@ -23,10 +27,7 @@ export default function CartModal(props) {
     return (
         <>
             {createPortal(<Backdrop onClose={props.onClose} />, portalElement)}
-            {createPortal(
-                <ModalOverlay>{props.children}</ModalOverlay>,
-                portalElement
-            )}
+            {createPortal(<ModalOverlay>{props.children}</ModalOverlay>, portalElement)}
         </>
     );
 }

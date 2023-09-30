@@ -9,7 +9,7 @@ const Navigation = () => {
                     <li>
                         <NavLink
                             to="/"
-                            className="rounded-md  hover:bg-yellow-500 hover:text-black visited:bg-yellow-500" // visited property doesn't display as intended
+                            className="rounded-md  hover:bg-amber-500 hover:text-black visited:bg-yellow-500" // visited property doesn't display as intended
                             end
                         >
                             Home
@@ -18,7 +18,7 @@ const Navigation = () => {
                     <li>
                         <NavLink
                             to="/about-us"
-                            className="rounded-md  hover:bg-yellow-500 hover:text-black "
+                            className="rounded-md  hover:bg-amber-500 hover:text-black "
                         >
                             About Us
                         </NavLink>
@@ -26,7 +26,7 @@ const Navigation = () => {
                     <li>
                         <NavLink
                             to="/contact"
-                            className="rounded-md  hover:bg-yellow-500 hover:text-black "
+                            className="rounded-md  hover:bg-amber-500 hover:text-black "
                         >
                             Contact
                         </NavLink>
@@ -34,7 +34,7 @@ const Navigation = () => {
                     <li>
                         <NavLink
                             to="/comps"
-                            className="rounded-md  hover:bg-yellow-500 hover:text-black "
+                            className="rounded-md  hover:bg-amber-500 hover:text-black "
                         >
                             Comps
                         </NavLink>
@@ -42,7 +42,7 @@ const Navigation = () => {
                     <li>
                         <NavLink
                             to="/shop"
-                            className="rounded-md  hover:bg-yellow-500 hover:text-black "
+                            className="rounded-md  hover:bg-amber-500 hover:text-black "
                         >
                             Shop
                         </NavLink>
