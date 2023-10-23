@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
     return (
-        // should these be LIs?
         <header>
             <nav>
                 <ul className="flex flex-row place-content-center gap-4 md:gap-10 lg:gap-20">
