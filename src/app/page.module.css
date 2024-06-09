@@ -29,3 +29,11 @@ nav
     justify-items: center;
     gap: 2em;
 }
+
+.logo {
+    border-radius: 5.5rem;
+    border-bottom-left-radius: 12.5rem;
+    border-bottom-right-radius: 12.5rem;
+    position: relative;
+    float: left;
+}

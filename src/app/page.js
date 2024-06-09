@@ -20,7 +20,13 @@ export default function Page() {
                         </ul>
                     </nav>
                 </header>
+                <img
+                    src="/dhlogo.svg"
+                    className={styles.logo}
+                />
+
                 <h1>Hello, Next.js!</h1>
+
                 <footer>By Phil</footer>
             </main>
         </>
