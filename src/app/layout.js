@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-    title: "DogHouse MMA",
+    title: "Dog House MMA",
     description: "Woof woof!",
 };
 

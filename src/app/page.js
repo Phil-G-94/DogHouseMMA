@@ -1,32 +1,16 @@
 import styles from "./page.module.css";
+import Header from "./components/Header.jsx";
 
 export default function Page() {
     return (
         <>
             <main className={styles["flex_container_col"]}>
-                <header>
-                    <nav
-                        className={
-                            styles["flex_container_row"]
-                        }
-                    >
-                        <ul className={styles["nav-list"]}>
-                            <li>
-                                <a href="/">The Club</a>
-                            </li>
-                            <li>
-                                <a href="/">The Shop</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </header>
+                <Header />
+                <h1>Dog House MMA</h1>
                 <img
-                    src="/dhlogo.svg"
+                    src="/dhlogo.jpeg"
                     className={styles.logo}
                 />
-
-                <h1>Hello, Next.js!</h1>
-
                 <footer>By Phil</footer>
             </main>
         </>

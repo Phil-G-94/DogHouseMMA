@@ -34,12 +34,12 @@ nav
     align-content: center;
     justify-items: center;
     gap: 2em;
+    font-size: 2rem;
 }
 
 .logo {
-    border-radius: 5.5rem;
-    border-bottom-left-radius: 12.5rem;
-    border-bottom-right-radius: 12.5rem;
-    position: relative;
-    float: left;
+    border-radius: 5%;
+    width: 30em;
+    height: 30em;
+    margin: 2em;
 }
