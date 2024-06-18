@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Header() {
     return (
-        <header>
+        <header className={styles["flex_container_col"]}>
             <nav className={styles["flex_container_row"]}>
                 <ul className={styles["nav-list"]}>
                     <Link href="/">Home</Link>

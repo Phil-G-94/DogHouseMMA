@@ -1,0 +1,16 @@
+.center_text {
+    text-align: center;
+}
+
+.flex_container_col {
+    display: flex;
+    flex-direction: column;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix {
+    clear: both;
+}
