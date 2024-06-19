@@ -7,10 +7,7 @@ export default function Page() {
             <main className={styles["flex_container_col"]}>
                 <Header />
                 <h1>Dog House MMA</h1>
-                <img
-                    src="/dhlogo.jpeg"
-                    className={styles.logo}
-                />
+                <img src="/dhlogo.jpeg" className={styles.logo} />
                 <footer>By Phil</footer>
             </main>
         </>

@@ -7,10 +7,24 @@
     flex-direction: column;
 }
 
-.right {
-    float: right;
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2em;
 }
 
-.clearfix {
-    clear: both;
+.grid_item_one {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.grid_item_two {
+    grid-column-start: -3;
+    grid-column-end: -5;
+}
+
+.grid_item_three {
+    grid-column-start: 3;
+    grid-column-end: 5;
 }
