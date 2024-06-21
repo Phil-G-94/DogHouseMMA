@@ -7,27 +7,24 @@ export default function Page() {
             <Header />
             <main className={styles["flex_container_col"]}>
                 <article>
-                    <h1 className={styles["center_text"]}>The Club</h1>
-
                     <div className={styles["grid_container"]}>
-                        <section className={styles["grid_item_one"]}>
-                            <h2>Who We Are</h2>
+                        <section className={`${styles["grid_item_one"]} ${styles["margin_top_sm"]}`}>
+                            <h2 className={styles["center_text"]}>Who We Are</h2>
 
-                            <div>
+                            <div className={styles["padding_sm"]}>
                                 <p>
-                                    Pariatur qui deserunt elit quis deserunt ex aute irure. Duis
-                                    ipsum voluptate excepteur aliquip officia laborum aute aliquip
-                                    adipisicing tempor exercitation. Velit ipsum sunt labore irure
-                                    amet id ex. Aliqua proident veniam tempor dolor proident
-                                    cupidatat sit esse fugiat. Amet dolore cupidatat sunt est duis
-                                    Lorem voluptate ea dolor exercitation qui fugiat.
+                                    Competitors and hobbyists with a passion for grappling and mixed martial arts.
+
+                                    <br />
+
+                                    Most of us train across various gyms in Wimbledon and South London, coming together at Dog House MMA to sharpen techniques and skills through sparring.
                                 </p>
                             </div>
                         </section>
                         <section className={styles["grid_item_two"]}>
-                            <h2>What We Do</h2>
+                            <h2 className={styles["center_text"]}>What We Do</h2>
 
-                            <div>
+                            <div className={styles["padding_sm"]}>
                                 <p>
                                     Pariatur qui deserunt elit quis deserunt ex aute irure. Duis
                                     ipsum voluptate excepteur aliquip officia laborum aute aliquip
@@ -47,9 +44,9 @@ export default function Page() {
                         </section>
 
                         <section className={styles["grid_item_three"]}>
-                            <h2>Why We Do It</h2>
+                            <h2 className={styles["center_text"]}>Why We Do It</h2>
 
-                            <div>
+                            <div className={styles["padding_sm"]}>
                                 <p>
                                     Excepteur officia nulla nulla ex ea ad. Dolore pariatur tempor ea
                                     cupidatat labore consectetur. Id ut ipsum occaecat laborum laboris
@@ -72,7 +69,7 @@ export default function Page() {
                     </div>
 
                 </article>
-            </main>
+            </main >
         </>
     );
 }
