@@ -17,29 +17,20 @@ export default function Page() {
 
                                     <br />
 
-                                    Most of us train across various gyms in Wimbledon and South London, coming together at Dog House MMA to sharpen techniques and skills through sparring.
+                                    Most of us train across various South London gyms and come together at Dog House MMA to exchange techniques, spar and prepare for competition.
                                 </p>
                             </div>
                         </section>
                         <section className={styles["grid_item_two"]}>
-                            <h2 className={styles["center_text"]}>What We Do</h2>
+                            <h2 className={styles["center_text"]}>Timetable</h2>
 
                             <div className={styles["padding_sm"]}>
                                 <p>
-                                    Pariatur qui deserunt elit quis deserunt ex aute irure. Duis
-                                    ipsum voluptate excepteur aliquip officia laborum aute aliquip
-                                    adipisicing tempor exercitation. Velit ipsum sunt labore irure
-                                    amet id ex. Aliqua proident veniam tempor dolor proident
-                                    cupidatat sit esse fugiat. Amet dolore cupidatat sunt est duis
-                                    Lorem voluptate ea dolor exercitation qui fugiat. Aute aute
-                                    veniam veniam occaecat. Pariatur magna Lorem tempor dolore aute
-                                    qui exercitation sint duis enim dolore non anim. Minim dolor
-                                    occaecat amet esse quis magna veniam ad elit officia sint
-                                    consectetur est proident. Non nisi eiusmod Lorem officia sint ea
-                                    aute aliqua ea cillum duis elit culpa eu. Incididunt officia sit
-                                    consectetur ex elit commodo ea culpa ex aute exercitation do
-                                    nostrud qui.
+                                    We meet 3 - 4 times a week in our South London dojo
+                                    <br></br>
+                                    Below this paragraph there should be a timetable component
                                 </p>
+
                             </div>
                         </section>
 

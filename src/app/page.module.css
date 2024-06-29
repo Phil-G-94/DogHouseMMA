@@ -4,6 +4,12 @@ containers
 
 */
 
+.grid_container {
+    display: grid;
+    place-items: center;
+    gap: 6em;
+}
+
 .flex_container_col {
     display: flex;
     flex-direction: column;
@@ -42,4 +48,15 @@ nav
     width: 30em;
     height: 30em;
     margin: 2em;
+}
+
+/*
+
+errors
+
+*/
+
+.not-found-sprite,
+.app-error-sprite {
+    fill: #0000;
 }
