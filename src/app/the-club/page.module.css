@@ -1,3 +1,6 @@
+/*
+utils
+*/
 .center_text {
     text-align: center;
 }
@@ -13,6 +16,10 @@
 .padding_left_sm {
     padding-left: 2em;
 }
+
+/*
+containers
+*/
 
 .flex_container_col {
     display: flex;
@@ -39,7 +46,11 @@
     grid-column: 3 / 5;
 }
 
-@media screen and (width <= 600px) {
+/*
+media queries
+*/
+
+@media screen and (width <= 825px) {
     .grid_container {
         display: grid;
     }
@@ -58,7 +69,7 @@
     }
 }
 
-@media screen and (width >= 600px) {
+@media screen and (width >= 825px) {
     .grid_container {
         display: grid;
     }

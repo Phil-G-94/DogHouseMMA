@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import Header from "../components/Header.jsx";
+import Timetable from "../components/Timetable";
 
 export default function Page() {
     return (
@@ -22,15 +23,10 @@ export default function Page() {
                             </div>
                         </section>
                         <section className={styles["grid_item_two"]}>
-                            <h2 className={styles["center_text"]}>Timetable</h2>
+                            <h2 className={styles["center_text"]}>When We Train</h2>
 
-                            <div className={styles["padding_sm"]}>
-                                <p>
-                                    We meet 3 - 4 times a week in our South London dojo
-                                    <br></br>
-                                    Below this paragraph there should be a timetable component
-                                </p>
-
+                            <div className={`${styles["padding_sm"]}`}>
+                                <Timetable />
                             </div>
                         </section>
 
