@@ -50,6 +50,25 @@ containers
 media queries
 */
 
+@media screen and (width = 375px) {
+    .grid_container {
+        display: grid;
+    }
+
+    .grid_item_one {
+        grid-column: 1 / 5;
+    }
+
+    .grid_item_two {
+        grid-column: 1 / 5;
+        /* align-self: self-start; */
+    }
+
+    .grid_item_three {
+        grid-column: 1 / 5;
+    }
+}
+
 @media screen and (width <= 825px) {
     .grid_container {
         display: grid;
@@ -61,7 +80,7 @@ media queries
 
     .grid_item_two {
         grid-column: 1 / 5;
-        align-self: self-start;
+        /* align-self: self-start; */
     }
 
     .grid_item_three {

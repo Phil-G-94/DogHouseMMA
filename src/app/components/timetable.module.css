@@ -1,0 +1,5 @@
+.table_container {
+    display: grid;
+    place-items: center;
+    min-width: 100%;
+}
