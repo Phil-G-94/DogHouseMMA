@@ -3,3 +3,17 @@
     place-items: center;
     min-width: 100%;
 }
+
+/* https://css-irl.info/building-an-interactive-timetable/ */
+
+.table {
+    border: 1px solid black;
+    border-radius: 1.25em;
+    padding: 1.25em;
+}
+
+.active-slots {
+    background-color: #8338ec;
+    color: #ffff;
+    text-align: center;
+}

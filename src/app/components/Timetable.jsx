@@ -3,7 +3,7 @@ import styles from "./timetable.module.css";
 export default function Timetable() {
     return (
         <div className={styles["table_container"]}>
-            <table style={{ border: "1px solid black" }}>
+            <table className={styles.table}>
                 <caption>Timetable</caption>
                 <thead>
                     <tr>
@@ -24,34 +24,20 @@ export default function Timetable() {
 
                     <tr>
                         <th scope="row">2pm - 4pm</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
                     </tr>
                     <tr>
                         <th scope="row">4pm - 6pm</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
                     </tr>
 
                     <tr>
                         <th scope="row">6pm - 8pm</th>
                         <td></td>
-                        <td style={{ backgroundColor: "purple", color: "white" }}>Live Rolls 🔥</td>
+                        <td className={styles["active-slots"]}>Live Rolls 🔥</td>
                         <td></td>
-                        <td style={{ backgroundColor: "purple", color: "white" }}>Live Rolls 🔥</td>
-                        <td style={{ backgroundColor: "purple", color: "white" }}>Live Rolls 🔥</td>
+                        <td className={styles["active-slots"]}>Live Rolls 🔥</td>
+                        <td className={styles["active-slots"]}>Live Rolls 🔥</td>
                         <td></td>
-                        <td style={{ backgroundColor: "purple", color: "white" }}>Live Rolls 🔥</td>
+                        <td className={styles["active-slots"]}>Live Rolls 🔥</td>
                     </tr>
                 </tbody>
                 <tfoot></tfoot>

@@ -1,14 +1,8 @@
 /*
 
-containers
+container
 
 */
-
-.grid_container {
-    display: grid;
-    place-items: center;
-    gap: 6em;
-}
 
 .flex_container_col {
     display: flex;
@@ -24,20 +18,21 @@ containers
     justify-items: center;
 }
 
-.logo {
-    border-radius: 5%;
-    width: 30em;
-    height: 30em;
-    margin: 2em;
-}
-
 /*
 
-errors
+nav
 
 */
 
-.not-found-sprite,
-.app-error-sprite {
-    fill: #0000;
+.nav-list {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-items: center;
+    gap: 2em;
+    font-size: 2rem;
 }
