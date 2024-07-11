@@ -15,9 +15,6 @@ export default function Page() {
                             <div className={styles["padding_sm"]}>
                                 <p>
                                     Competitors and hobbyists with a passion for grappling and mixed martial arts.
-
-                                    <br />
-
                                     Most of us train across various South London gyms and come together at Dog House MMA to exchange techniques, spar and prepare for competition.
                                 </p>
                             </div>
