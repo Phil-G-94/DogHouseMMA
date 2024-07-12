@@ -24,44 +24,66 @@ containers
 .flex_container_col {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid_container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    place-items: center;
+    grid-template-areas:
+        "AboutUs"
+        "Timetable"
+        "Instructor";
 }
 
 .grid_item_one {
-    grid-column: 2 / 4;
-    grid-row: 1;
+    grid-area: "AboutUs";
+    max-width: 70%;
 }
 
 .grid_item_two {
-    grid-column: 2 / 4;
-    grid-row: inherit;
+    grid-area: "Timetable";
+    max-width: 40%;
 }
 
 .grid_item_three {
-    grid-column: 2 / 4;
-    grid-row: inherit;
+    grid-area: "Instructor";
+    max-width: 70%;
 }
 
 /*
 media queries
 */
 
-@media screen and (max-width: 320px) {
-}
+@media screen and (min-width: 768px) {
+    .grid_container {
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "AboutUs"
+            "Timetable"
+            "Instructor";
+    }
 
-@media screen and (max-width: 375px) {
-}
+    .grid_item_one {
+        grid-area: "AboutUs";
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
 
-@media screen and (max-width: 425px) {
-}
+    .grid_item_two {
+        grid-area: "Timetable";
+        grid-column: 2 / 5;
+        grid-row: 2;
+        min-width: 100%;
+    }
 
-@media screen and (max-width: 768px) {
-}
-
-@media screen and (max-width > 768px) {
+    .grid_item_three {
+        grid-area: "Instructor";
+        grid-column: 1 / 3;
+        grid-row: 3;
+    }
 }

@@ -10,11 +10,11 @@ export default function Page() {
                 <article>
                     <div className={styles["grid_container"]}>
                         <section className={`${styles["grid_item_one"]} ${styles["margin_top_sm"]}`}>
-                            <h2 className={styles["center_text"]}>Who We Are</h2>
+                            <h2 className={styles["center_text"]}>About Us</h2>
 
                             <div className={styles["padding_sm"]}>
                                 <p>
-                                    Competitors and hobbyists with a passion for grappling and mixed martial arts.
+                                    We are competitors and hobbyists with a passion for grappling and mixed martial arts.
                                     Most of us train across various South London gyms and come together at Dog House MMA to exchange techniques, spar and prepare for competition.
                                 </p>
                             </div>
@@ -28,7 +28,7 @@ export default function Page() {
                         </section>
 
                         <section className={styles["grid_item_three"]}>
-                            <h2 className={styles["center_text"]}>Why We Do It</h2>
+                            <h2 className={styles["center_text"]}>Coach</h2>
 
                             <div className={styles["padding_sm"]}>
                                 <p>
